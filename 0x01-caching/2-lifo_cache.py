@@ -15,7 +15,7 @@ class FIFOCache(BaseCaching):
         call super to initialize BaseCaching
         '''
         super().__init__()
-        self.cache_data = OrderedDict()
+        self.cache_data = OrderedDict(self.cache_data)
 
     def put(self, key, item):
         '''
