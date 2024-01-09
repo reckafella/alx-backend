@@ -2,7 +2,7 @@
 '''
 Module for a basic Flask app
 '''
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 from flask_babel import Babel
 
 
@@ -11,8 +11,8 @@ class Config(object):
     Configuration class
     '''
     LANGUAGES = ['en', 'fr']
-    DEFAULT_LOCALE = 'en'
-    DEFAULT_TIMEZONE = 'UTC'
+    BABEL_DEFAULT_LOCALE = 'en'
+    BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
 app = Flask(__name__)
